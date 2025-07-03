@@ -297,9 +297,9 @@ body {
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
     object-fit: cover;
     border: 4px solid var(--gold);
     box-shadow: 0 0 18px rgba(191, 167, 106, 0.13);
