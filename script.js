@@ -81,16 +81,17 @@ function initMap() {
     // Create map centered on a point between the two locations
     map = L.map('trip-map').setView([39.5, -42.0], 4);
 
-    // Use a sepia-toned or classic light tile layer for a warm, vintage look
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-        attribution: '© OpenStreetMap contributors, © Stadia Maps'
+    // Use a free OpenStreetMap tile layer that doesn't require API key
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
     }).addTo(map);
 
     // Add custom flame markers for each location (more macho than stars)
     tripLocations.forEach((location, index) => {
         // Create custom flame icon
         const flameIcon = L.divIcon({
-            html: '<i class="fas fa-fire" style="color: #dc2626; font-size: 28px; text-shadow: 0 0 10px rgba(220, 38, 38, 0.8); filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));"></i>',
+            html: '<i class="fas fa-fire" style="color: #bfa76a; font-size: 28px; text-shadow: 0 0 10px rgba(191, 167, 106, 0.8); filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));"></i>',
             className: 'custom-flame-marker',
             iconSize: [28, 28],
             iconAnchor: [14, 14]
@@ -100,11 +101,11 @@ function initMap() {
         const marker = L.marker([location.lat, location.lng], { icon: flameIcon })
             .addTo(map)
             .bindPopup(`
-                <div style="text-align: center; padding: 15px; background: #1a1a1a; color: white; border: 2px solid #dc2626; border-radius: 10px; min-width: 200px;">
-                    <h3 style="margin: 0 0 8px 0; color: #dc2626; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">${location.name}</h3>
-                    <p style="margin: 0 0 15px 0; color: #a3a3a3; font-size: 14px; font-weight: 500;">${location.description}</p>
+                <div style="text-align: center; padding: 15px; background: #f5f3ef; color: #3e2723; border: 2px solid #bfa76a; border-radius: 10px; min-width: 200px;">
+                    <h3 style="margin: 0 0 8px 0; color: #6d3b1a; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">${location.name}</h3>
+                    <p style="margin: 0 0 15px 0; color: #a9744f; font-size: 14px; font-weight: 500;">${location.description}</p>
                     <button onclick="scrollToGallery('${location.galleryId}')" 
-                            style="padding: 10px 20px; background: #dc2626; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+                            style="padding: 10px 20px; background: #6d3b1a; color: #f5f3ef; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
                         View Gallery
                     </button>
                 </div>
@@ -147,11 +148,11 @@ const style = document.createElement('style');
 style.textContent = `
     @keyframes highlight {
         0%, 100% { 
-            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+            box-shadow: 0 10px 30px rgba(191, 167, 106, 0.2);
             transform: scale(1);
         }
         50% { 
-            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.6);
+            box-shadow: 0 20px 40px rgba(191, 167, 106, 0.6);
             transform: scale(1.02);
         }
     }
@@ -162,14 +163,14 @@ style.textContent = `
     }
     
     .leaflet-popup-content-wrapper {
-        background: #1a1a1a !important;
-        border: 2px solid #dc2626 !important;
+        background: #f5f3ef !important;
+        border: 2px solid #bfa76a !important;
         border-radius: 10px !important;
     }
     
     .leaflet-popup-tip {
-        background: #1a1a1a !important;
-        border: 2px solid #dc2626 !important;
+        background: #f5f3ef !important;
+        border: 2px solid #bfa76a !important;
     }
 `;
 document.head.appendChild(style);
