@@ -97,7 +97,7 @@ function initMap() {
             iconAnchor: [14, 14]
         });
 
-        // Add marker to map
+        // Add marker to map with popup only
         const marker = L.marker([location.lat, location.lng], { icon: flameIcon })
             .addTo(map)
             .bindPopup(`
@@ -105,20 +105,13 @@ function initMap() {
                     <h3 style="margin: 0 0 8px 0; color: #3C3F4A; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">${location.name}</h3>
                     <p style="margin: 0 0 15px 0; color: #7D4E2D; font-size: 14px; font-weight: 500;">${location.description}</p>
                     <button onclick="scrollToGallery('${location.galleryId}')" 
-                            style="padding: 10px 20px; background: #40666B; color: #F5F3EF; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+                            style="padding: 10px 20px; background: #545555; color: #F5F3EF; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
                         View Gallery
                     </button>
                 </div>
             `);
 
         markers.push(marker);
-
-        // Add click event to scroll to gallery
-        marker.on('click', () => {
-            setTimeout(() => {
-                scrollToGallery(location.galleryId);
-            }, 300);
-        });
     });
 
     // Fit map to show all markers
