@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Costa - Motorcycle Journeys</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-motorcycle"></i>
+                <span>Paulo Costa</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#map" class="nav-link">Trips</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Paulo Costa</h1>
+            <p class="hero-subtitle">Motorcycling, Friendship & The Open Road</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Riding</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Trips Shared</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10k+</span>
+                    <span class="stat-label">Miles Enjoyed</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="motorcycle-icon">
+                <i class="fas fa-motorcycle"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Olá! I'm Paulo Costa, a lifelong motorcycling enthusiast from Portugal. For over 15 years, I've found joy and freedom on two wheels, exploring beautiful places and sharing the road with great friends.</p>
+                    <p>Whether it's the sunlit coast of Lisbon or the winding roads of the Poconos, every trip is about the journey, the camaraderie, and the memories made along the way. This site is a collection of some of my favorite rides and the special moments that come with them.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-road"></i>
+                            <span>Scenic Routes</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Good Company</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-camera-retro"></i>
+                            <span>Photo Memories</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2 class="section-title">Trip Destinations</h2>
+            <p class="section-subtitle">Click a location to see photos from the journey</p>
+            <div id="trip-map"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Trip Gallery</h2>
+            
+            <!-- Portugal Trip -->
+            <div id="portugal-gallery" class="trip-gallery">
+                <h3 class="trip-title">Portugal 2024</h3>
+                <p class="trip-description">Exploring the beautiful coastal roads and historic streets of Portugal with friends. The Atlantic breeze, good food, and great company made this trip truly special.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal20242.jpg" alt="Portugal Coastline" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal20245.jpg" alt="Historic District" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal20246.jpg" alt="Group Photo" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal20247.jpg" alt="Sunset Ride" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal20248.jpg" alt="Scenic View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal20249.jpg" alt="Motorcycle Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal202410.jpg" alt="Coastal Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal202411.jpg" alt="Mountain Pass" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal202412.jpg" alt="Village Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal202413.jpg" alt="Riding Group" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal202414.jpg" alt="Scenic Overlook" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal202415.jpg" alt="Road Trip" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/portugal_2024/portugal202416.jpg" alt="Final Stop" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finger Lakes Trip -->
+            <div id="finger-lakes-gallery" class="trip-gallery">
+                <h3 class="trip-title">Finger Lakes, NY 2022</h3>
+                <p class="trip-description">Exploring the scenic Finger Lakes region with its beautiful lakes, rolling hills, and wine country. A perfect summer adventure with friends.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20221.jpg" alt="Lake View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20223.jpg" alt="Wine Country" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20224.jpg" alt="Scenic Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20225.jpg" alt="Group Photo" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20226.jpg" alt="Lakeside Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20227.jpg" alt="Mountain Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20228.jpg" alt="Riding Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/finger_lakes_ny_2022/fingerlakes20229.jpg" alt="Sunset Ride" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lake Erie Trip -->
+            <div id="lake-erie-gallery" class="trip-gallery">
+                <h3 class="trip-title">Lake Erie 2023</h3>
+                <p class="trip-description">Riding along the beautiful Lake Erie shoreline, exploring coastal towns and enjoying the Great Lakes scenery with great friends.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/lake_erie_2023/lakerie20231.jpg" alt="Lake Shore" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/lake_erie_2023/lakerie20232.jpg" alt="Coastal Town" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/lake_erie_2023/lakerie20233.jpg" alt="Waterfront View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/lake_erie_2023/lakerie20234.jpg" alt="Group Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/lake_erie_2023/lakerie20235.jpg" alt="Scenic Overlook" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/lake_erie_2023/lakerie20236.jpg" alt="Lakeside Adventure" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tennessee Trip -->
+            <div id="tennessee-gallery" class="trip-gallery">
+                <h3 class="trip-title">Tennessee 2023 - Tail of the Dragon</h3>
+                <p class="trip-description">Conquering the legendary Tail of the Dragon with its 318 curves in 11 miles. A challenging and exhilarating ride through the Smoky Mountains.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon2.jpg" alt="Dragon Curves" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon3.jpg" alt="Mountain Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon4.jpg" alt="Scenic Pass" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon5.jpg" alt="Group Photo" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon6.jpg" alt="Riding Challenge" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon7.jpg" alt="Mountain Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon8.jpg" alt="Road Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon10.jpg" alt="Scenic Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/tennessee_2023/tennesseetailofthedragon12.jpg" alt="Final View" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mount Washington Trip -->
+            <div id="mount-washington-gallery" class="trip-gallery">
+                <h3 class="trip-title">Mount Washington 2024 - NH & Maine</h3>
+                <p class="trip-description">Exploring the majestic Mount Washington region and the beautiful landscapes of New Hampshire and Maine. Mountain roads, scenic overlooks, and unforgettable views.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20242.jpg" alt="Mountain Peak" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20243.jpg" alt="Alpine Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20244.jpg" alt="Scenic Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20245.jpg" alt="Mountain Pass" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20246.jpg" alt="Group Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20247.jpg" alt="Riding Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20248.jpg" alt="Mountain View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine20249.jpg" alt="Scenic Overlook" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202410.jpg" alt="Alpine Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202412.jpg" alt="Mountain Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202413.jpg" alt="Peak View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202415.jpg" alt="Final Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202417.jpg" alt="Mountain Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202418.jpg" alt="Alpine Pass" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202419.jpg" alt="Scenic Ride" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202420.jpg" alt="Mountain Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/mount_washington_new_hampshire_maine_2024/NH:Maine202421.jpg" alt="Peak Experience" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Austin Trip -->
+            <div id="austin-gallery" class="trip-gallery">
+                <h3 class="trip-title">Austin MotoGP 2019</h3>
+                <p class="trip-description">Attending the MotoGP race in Austin, Texas. A thrilling experience watching world-class motorcycle racing and exploring the Texas hill country.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/austin_2019/austinmotogp20191.jpg" alt="MotoGP Track" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/austin_2019/austinmotogp20192.jpg" alt="Race Action" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/austin_2019/austinmotogp20194.jpg" alt="Track View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/austin_2019/austinmotogp20195.jpg" alt="Racing Excitement" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/austin_2019/austinmotogp20196.jpg" alt="Hill Country" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/austin_2019/austinmotogp20197.jpg" alt="Texas Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/austin_2019/austinmotogpvalentinorossifeature.jpg" alt="Valentino Rossi" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- West Virginia Trip -->
+            <div id="west-virginia-gallery" class="trip-gallery">
+                <h3 class="trip-title">West Virginia 2025</h3>
+                <p class="trip-description">Exploring the beautiful mountain roads of West Virginia. Scenic overlooks, winding mountain passes, and the natural beauty of the Appalachian Mountains.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/west_virginia_2025/WestVA20251.jpg" alt="Mountain Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/west_virginia_2025/WestVA20252.jpg" alt="Scenic Overlook" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/west_virginia_2025/WestVA20253.jpg" alt="Mountain Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/west_virginia_2025/WestVA20254.jpg" alt="Group Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/west_virginia_2025/WestVA20255.jpg" alt="Mountain Pass" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/west_virginia_2025/WestVA20256.jpg" alt="Scenic Adventure" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upstate New York Trip -->
+            <div id="upstate-ny-gallery" class="trip-gallery">
+                <h3 class="trip-title">Upstate New York 2025</h3>
+                <p class="trip-description">Exploring the beautiful Adirondacks and Hudson Valley region. Rolling hills, historic towns, and the natural beauty of upstate New York.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY20251.jpg" alt="Adirondack View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY20252.jpg" alt="Mountain Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY20253.jpg" alt="Scenic Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY20254.jpg" alt="Hudson Valley" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY20255.jpg" alt="Group Photo" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY20256.jpg" alt="Mountain Pass" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY20257.jpg" alt="Scenic Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202510.jpg" alt="Riding Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202511.jpg" alt="Mountain View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202512.jpg" alt="Scenic Overlook" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202514.jpg" alt="Adirondack Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202515.jpg" alt="Mountain Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202516.jpg" alt="Scenic Road" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202517.jpg" alt="Mountain Pass" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202518.jpg" alt="Group Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202520.jpg" alt="Scenic View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202521.jpg" alt="Mountain Adventure" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202522.jpg" alt="Final Stop" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202525.jpg" alt="Scenic Ride" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202526.jpg" alt="Mountain Vista" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202527.jpg" alt="Adirondack View" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="trips/upstate_new_york_2025/UpstateNY202528.jpg" alt="Scenic Adventure" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Paulo Costa</h4>
+                    <p>Motorcycle enthusiast | Portugal</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Paulo Costa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
