@@ -149,10 +149,10 @@ body {
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     position: relative;
     z-index: 2;
 }
@@ -160,7 +160,7 @@ body {
 .hero-title {
     font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -170,7 +170,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     opacity: 0.95;
     text-transform: none;
     letter-spacing: 1px;
@@ -215,13 +215,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .motorcycle-icon {
-    font-size: 13rem;
+    font-size: 8rem;
     color: var(--blue-accent);
-    opacity: 0.18;
+    opacity: 0.25;
     filter: blur(0.5px);
+    margin-bottom: 1rem;
 }
 
 @keyframes float {
@@ -499,22 +501,17 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--mahogany);
+        background-color: var(--primary-blue);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(77, 46, 23, 0.13);
+        box-shadow: 0 10px 27px rgba(30, 64, 175, 0.2);
         padding: 2rem 0;
-        border-top: 2px solid var(--gold);
+        border-top: 2px solid var(--blue-accent);
     }
 
     .nav-menu.active {
         left: 0;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
     }
 
     .hero-title {
