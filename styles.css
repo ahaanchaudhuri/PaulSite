@@ -8,8 +8,8 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #3e2723;
-    background: #f5f3ef;
+    color: var(--text-dark);
+    background: var(--white);
     overflow-x: hidden;
 }
 
@@ -21,13 +21,15 @@ body {
 
 /* Color Palette */
 :root {
-    --mahogany: #6d3b1a;
-    --mahogany-dark: #4b2612;
-    --mahogany-light: #a9744f;
-    --cream: #f5f3ef;
-    --gold: #bfa76a;
-    --text-dark: #3e2723;
-    --text-light: #fff8e1;
+    --primary-blue: #1e40af;
+    --blue-dark: #1e3a8a;
+    --blue-light: #3b82f6;
+    --blue-accent: #60a5fa;
+    --white: #ffffff;
+    --gray-light: #f8fafc;
+    --gray-medium: #e2e8f0;
+    --text-dark: #1e293b;
+    --text-light: #ffffff;
 }
 
 /* Navigation */
@@ -35,12 +37,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--mahogany);
+    background: var(--primary-blue);
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 12px rgba(77, 46, 23, 0.08);
-    border-bottom: 2px solid var(--gold);
+    box-shadow: 0 2px 12px rgba(30, 64, 175, 0.15);
+    border-bottom: 2px solid var(--blue-accent);
 }
 
 .nav-container {
@@ -58,7 +60,7 @@ body {
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--gold);
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
@@ -66,7 +68,7 @@ body {
 
 .nav-logo i {
     font-size: 2rem;
-    color: var(--gold);
+    color: var(--blue-accent);
 }
 
 .nav-menu {
@@ -87,7 +89,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--gold);
+    color: var(--blue-accent);
 }
 
 .nav-link::after {
@@ -97,7 +99,7 @@ body {
     height: 3px;
     bottom: -5px;
     left: 0;
-    background-color: var(--gold);
+    background-color: var(--blue-accent);
     transition: width 0.3s ease;
     border-radius: 2px;
 }
@@ -115,7 +117,7 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--gold);
+    background-color: var(--blue-accent);
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 2px;
@@ -126,7 +128,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--mahogany) 0%, var(--mahogany-dark) 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--blue-dark) 100%);
     color: var(--text-light);
     padding: 100px 20px 50px;
     position: relative;
@@ -159,10 +161,10 @@ body {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    color: var(--gold);
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 1px 1px 8px rgba(77, 46, 23, 0.15);
+    text-shadow: 1px 1px 8px rgba(30, 64, 175, 0.3);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -173,7 +175,7 @@ body {
     text-transform: none;
     letter-spacing: 1px;
     font-weight: 500;
-    color: var(--cream);
+    color: var(--blue-accent);
 }
 
 .hero-stats {
@@ -183,19 +185,19 @@ body {
 
 .stat {
     text-align: center;
-    background: var(--mahogany-light);
+    background: var(--blue-light);
     padding: 1rem 1.5rem;
     border-radius: 12px;
-    border: 1.5px solid var(--gold);
+    border: 1.5px solid var(--blue-accent);
     color: var(--text-light);
-    box-shadow: 0 2px 8px rgba(77, 46, 23, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.15);
 }
 
 .stat-number {
     display: block;
     font-size: 2.2rem;
     font-weight: 800;
-    color: var(--gold);
+    color: var(--white);
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
 }
@@ -206,7 +208,7 @@ body {
     text-transform: none;
     letter-spacing: 1px;
     font-weight: 500;
-    color: var(--cream);
+    color: var(--blue-accent);
 }
 
 .hero-image {
@@ -217,7 +219,7 @@ body {
 
 .motorcycle-icon {
     font-size: 13rem;
-    color: var(--gold);
+    color: var(--blue-accent);
     opacity: 0.18;
     filter: blur(0.5px);
 }
@@ -230,7 +232,7 @@ body {
 /* About Section */
 .about {
     padding: 100px 0;
-    background: var(--cream);
+    background: var(--gray-light);
     color: var(--text-dark);
 }
 
@@ -239,7 +241,7 @@ body {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    color: var(--mahogany);
+    color: var(--primary-blue);
     text-transform: none;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
@@ -248,7 +250,7 @@ body {
 .section-subtitle {
     text-align: center;
     font-size: 1.1rem;
-    color: var(--mahogany-light);
+    color: var(--blue-light);
     margin-bottom: 3rem;
     text-transform: none;
     letter-spacing: 1px;
@@ -264,7 +266,7 @@ body {
 .about-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: var(--mahogany-dark);
+    color: var(--text-dark);
     line-height: 1.8;
     font-weight: 500;
 }
@@ -279,7 +281,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--mahogany);
+    color: var(--primary-blue);
     font-weight: 600;
     text-transform: none;
     letter-spacing: 1px;
@@ -288,7 +290,7 @@ body {
 
 .feature i {
     font-size: 1.3rem;
-    color: var(--gold);
+    color: var(--blue-accent);
 }
 
 .about-image {
@@ -301,8 +303,8 @@ body {
     height: 300px;
     border-radius: 8px;
     object-fit: cover;
-    border: 4px solid var(--gold);
-    box-shadow: 0 0 18px rgba(191, 167, 106, 0.13);
+    border: 4px solid var(--blue-accent);
+    box-shadow: 0 0 18px rgba(96, 165, 250, 0.2);
 }
 
 .profile-placeholder {
@@ -322,38 +324,38 @@ body {
 /* Map Section */
 .map-section {
     padding: 100px 0;
-    background: var(--cream);
-    color: var(--mahogany-dark);
+    background: var(--white);
+    color: var(--text-dark);
 }
 
 #trip-map {
     height: 500px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(77, 46, 23, 0.08);
-    border: 2px solid var(--mahogany-light);
+    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.1);
+    border: 2px solid var(--blue-light);
 }
 
 /* Gallery Section */
 .gallery {
     padding: 100px 0;
-    background: var(--mahogany-light);
+    background: var(--gray-light);
     color: var(--text-dark);
 }
 
 .trip-gallery {
     margin-bottom: 4rem;
     padding: 2rem;
-    background: var(--cream);
+    background: var(--white);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(77, 46, 23, 0.10);
-    border: 1.5px solid var(--mahogany);
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.1);
+    border: 1.5px solid var(--blue-light);
 }
 
 .trip-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--mahogany);
+    color: var(--primary-blue);
     margin-bottom: 1rem;
     text-transform: none;
     letter-spacing: 1px;
@@ -362,7 +364,7 @@ body {
 
 .trip-description {
     font-size: 1.1rem;
-    color: var(--mahogany-dark);
+    color: var(--text-dark);
     margin-bottom: 2rem;
     line-height: 1.7;
     font-weight: 500;
@@ -379,14 +381,14 @@ body {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1.5px solid var(--mahogany-light);
-    background: var(--cream);
+    border: 1.5px solid var(--blue-light);
+    background: var(--white);
     position: relative;
 }
 
 .gallery-item:hover {
     transform: translateY(-7px) scale(1.03);
-    box-shadow: 0 12px 32px rgba(191, 167, 106, 0.13);
+    box-shadow: 0 12px 32px rgba(96, 165, 250, 0.2);
 }
 
 .gallery-item img {
@@ -426,10 +428,10 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--mahogany);
+    background: var(--primary-blue);
     color: var(--text-light);
     padding: 50px 0 20px;
-    border-top: 2px solid var(--gold);
+    border-top: 2px solid var(--blue-accent);
 }
 
 .footer-content {
@@ -442,7 +444,7 @@ body {
 .footer-section h4 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: var(--gold);
+    color: var(--blue-accent);
     text-transform: none;
     letter-spacing: 1px;
     font-weight: 700;
@@ -459,28 +461,28 @@ body {
     font-size: 1.5rem;
     transition: color 0.3s ease, background 0.3s ease;
     padding: 10px;
-    border: 1.5px solid var(--gold);
+    border: 1.5px solid var(--blue-accent);
     border-radius: 50%;
     width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--mahogany-dark);
+    background: var(--blue-dark);
 }
 
 .social-links a:hover {
-    color: var(--mahogany);
-    background: var(--gold);
-    border-color: var(--mahogany);
+    color: var(--primary-blue);
+    background: var(--blue-accent);
+    border-color: var(--primary-blue);
     transform: scale(1.08);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--mahogany-light);
-    color: var(--gold);
+    border-top: 1px solid var(--blue-light);
+    color: var(--blue-accent);
     text-transform: none;
     letter-spacing: 1px;
     font-weight: 500;
@@ -568,17 +570,17 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--cream);
+    background: var(--gray-light);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--mahogany-light);
+    background: var(--blue-light);
     border-radius: 6px;
-    border: 2px solid var(--cream);
+    border: 2px solid var(--gray-light);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--mahogany);
+    background: var(--primary-blue);
 }
 
 h1, h2, h3, .hero-title, .section-title, .trip-title, .stat-number, .nav-logo, .footer-section h4 {

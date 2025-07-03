@@ -91,7 +91,7 @@ function initMap() {
     tripLocations.forEach((location, index) => {
         // Create custom flame icon
         const flameIcon = L.divIcon({
-            html: '<i class="fas fa-fire" style="color: #bfa76a; font-size: 28px; text-shadow: 0 0 10px rgba(191, 167, 106, 0.8); filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));"></i>',
+            html: '<i class="fas fa-fire" style="color: #3b82f6; font-size: 28px; text-shadow: 0 0 10px rgba(59, 130, 246, 0.8); filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));"></i>',
             className: 'custom-flame-marker',
             iconSize: [28, 28],
             iconAnchor: [14, 14]
@@ -101,11 +101,11 @@ function initMap() {
         const marker = L.marker([location.lat, location.lng], { icon: flameIcon })
             .addTo(map)
             .bindPopup(`
-                <div style="text-align: center; padding: 15px; background: #f5f3ef; color: #3e2723; border: 2px solid #bfa76a; border-radius: 10px; min-width: 200px;">
-                    <h3 style="margin: 0 0 8px 0; color: #6d3b1a; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">${location.name}</h3>
-                    <p style="margin: 0 0 15px 0; color: #a9744f; font-size: 14px; font-weight: 500;">${location.description}</p>
+                <div style="text-align: center; padding: 15px; background: #ffffff; color: #1e293b; border: 2px solid #3b82f6; border-radius: 10px; min-width: 200px;">
+                    <h3 style="margin: 0 0 8px 0; color: #1e40af; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">${location.name}</h3>
+                    <p style="margin: 0 0 15px 0; color: #64748b; font-size: 14px; font-weight: 500;">${location.description}</p>
                     <button onclick="scrollToGallery('${location.galleryId}')" 
-                            style="padding: 10px 20px; background: #6d3b1a; color: #f5f3ef; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+                            style="padding: 10px 20px; background: #1e40af; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
                         View Gallery
                     </button>
                 </div>
@@ -148,11 +148,11 @@ const style = document.createElement('style');
 style.textContent = `
     @keyframes highlight {
         0%, 100% { 
-            box-shadow: 0 10px 30px rgba(191, 167, 106, 0.2);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
             transform: scale(1);
         }
         50% { 
-            box-shadow: 0 20px 40px rgba(191, 167, 106, 0.6);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.6);
             transform: scale(1.02);
         }
     }
@@ -163,14 +163,14 @@ style.textContent = `
     }
     
     .leaflet-popup-content-wrapper {
-        background: #f5f3ef !important;
-        border: 2px solid #bfa76a !important;
+        background: #ffffff !important;
+        border: 2px solid #3b82f6 !important;
         border-radius: 10px !important;
     }
     
     .leaflet-popup-tip {
-        background: #f5f3ef !important;
-        border: 2px solid #bfa76a !important;
+        background: #ffffff !important;
+        border: 2px solid #3b82f6 !important;
     }
 `;
 document.head.appendChild(style);
