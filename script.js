@@ -91,7 +91,7 @@ function initMap() {
     tripLocations.forEach((location, index) => {
         // Create custom flame icon
         const flameIcon = L.divIcon({
-            html: '<i class="fas fa-fire" style="color: #3b82f6; font-size: 28px; text-shadow: 0 0 10px rgba(59, 130, 246, 0.8); filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));"></i>',
+            html: '<i class="fas fa-fire" style="color: #C5A46D; font-size: 28px; text-shadow: 0 0 10px rgba(197, 164, 109, 0.8); filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));"></i>',
             className: 'custom-flame-marker',
             iconSize: [28, 28],
             iconAnchor: [14, 14]
@@ -101,11 +101,11 @@ function initMap() {
         const marker = L.marker([location.lat, location.lng], { icon: flameIcon })
             .addTo(map)
             .bindPopup(`
-                <div style="text-align: center; padding: 15px; background: #ffffff; color: #1e293b; border: 2px solid #3b82f6; border-radius: 10px; min-width: 200px;">
-                    <h3 style="margin: 0 0 8px 0; color: #1e40af; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">${location.name}</h3>
-                    <p style="margin: 0 0 15px 0; color: #64748b; font-size: 14px; font-weight: 500;">${location.description}</p>
+                <div style="text-align: center; padding: 15px; background: #F5F3EF; color: #1C1D20; border: 2px solid #C5A46D; border-radius: 10px; min-width: 200px;">
+                    <h3 style="margin: 0 0 8px 0; color: #3C3F4A; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">${location.name}</h3>
+                    <p style="margin: 0 0 15px 0; color: #7D4E2D; font-size: 14px; font-weight: 500;">${location.description}</p>
                     <button onclick="scrollToGallery('${location.galleryId}')" 
-                            style="padding: 10px 20px; background: #1e40af; color: #ffffff; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
+                            style="padding: 10px 20px; background: #40666B; color: #F5F3EF; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;">
                         View Gallery
                     </button>
                 </div>
@@ -148,11 +148,11 @@ const style = document.createElement('style');
 style.textContent = `
     @keyframes highlight {
         0%, 100% { 
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            box-shadow: 0 10px 30px rgba(197, 164, 109, 0.2);
             transform: scale(1);
         }
         50% { 
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.6);
+            box-shadow: 0 20px 40px rgba(197, 164, 109, 0.6);
             transform: scale(1.02);
         }
     }
@@ -163,14 +163,14 @@ style.textContent = `
     }
     
     .leaflet-popup-content-wrapper {
-        background: #ffffff !important;
-        border: 2px solid #3b82f6 !important;
+        background: #F5F3EF !important;
+        border: 2px solid #C5A46D !important;
         border-radius: 10px !important;
     }
     
     .leaflet-popup-tip {
-        background: #ffffff !important;
-        border: 2px solid #3b82f6 !important;
+        background: #F5F3EF !important;
+        border: 2px solid #C5A46D !important;
     }
 `;
 document.head.appendChild(style);
@@ -193,10 +193,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(30, 64, 175, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(59, 130, 246, 0.3)';
+        navbar.style.background = 'rgba(60, 63, 74, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(197, 164, 109, 0.3)';
     } else {
-        navbar.style.background = 'rgba(30, 64, 175, 0.95)';
+        navbar.style.background = 'rgba(60, 63, 74, 0.95)';
         navbar.style.boxShadow = 'none';
     }
 });
